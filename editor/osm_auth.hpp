@@ -99,6 +99,10 @@ public:
   // AuthResult FinishAuthorization(KeySecret const & requestToken, string const & verifier);
   std::string GetRegistrationURL() const noexcept { return m_baseUrl + "/user/new"; }
   std::string GetResetPasswordURL() const noexcept { return m_baseUrl + "/user/forgot-password"; }
+  std::string GetHistoryURL(std::string const & user) const noexcept
+  {
+    return m_baseUrl + "/user/" + user + "/history";
+  }
   //@}
 
 private:
